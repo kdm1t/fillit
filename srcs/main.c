@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mwilbur <mwilbur@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 13:51:13 by rmaxima           #+#    #+#             */
-/*   Updated: 2019/12/08 16:04:39 by mwilbur          ###   ########.fr       */
+/*   Updated: 2019/12/11 17:14:20 by mwilbur          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_flist		*read_tetramino(char *file)
 	fd = open(file, O_RDONLY);
 	ret = read(fd, buff, 545);
 	close(fd);
-	if (ret > 544 || ret < 19)
+	if (ret > 545 || ret < 19)
 		return (NULL);
 	buff[ret] = '\0';
 	if (validate(buff, ret) == 0)
